@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greetings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>GREETINGS</h1>
+    <br>
+    <br>
+    <form onsubmit="greeting(event)">
+
+      <div class="num1">
+        <label for="username" style="margin-left: 35px; text-decoration: underline;">Name</label>
+        <input type="text" name="username" id="username" placeholder="Enter Your Name">
+      </div>
+
+
+      <br>
+      <!-- create three radio buttons with English ,xhosa , afrikaans -->
+      <label for="language" style="margin-left: 35px; text-decoration: underline;" >Language</label>
+      <br><br>
+      <input type="radio" name="language" value="English" id="english" style="margin-left: 35px">
+      <label for="english">English</label>
+      <input type="radio" name="language" value="Xhosa" id="xhosa">
+      <label for="xhosa">Xhosa</label>
+      <input type="radio" name="language" value="Afrikaans" id="afrikaans">
+      <label for="afrikaans">Afrikaans</label>
+      <br>
+      <br>
+      <br>
+      <!-- div that will store my usernames -->
+      
+      <button type="submit" style="margin-left: 163px; width: 100px; height: 28px" onclick="countUsers()">Greet</button>
+      <!-- button to clear -->
+      <button type="reset" style="margin-left: 10px; width: 100px; height: 28px" class="clear"onclick="clearLocalStorage(event)">Clear</button>
+      <br>
+      <br>
+      <h3 class="counter" id="text" style="text-align: center;">0</h3>
+    </form>
+  </div>
+  <div id="message">
+      </div>
+  <script src="greet.js"></script>
+  <!-- <script src="store.js"></script> -->
+</body>
+
+</html>
