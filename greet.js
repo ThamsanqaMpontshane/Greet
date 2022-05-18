@@ -57,7 +57,7 @@ function greeting(event) {
     }
     //if uppercasename has text and radio button is not selected say "please select language"
     else if(radioEnglish.checked === false && upperCaseName !== ""){
-        message.innerHTML = "Please select langyafe"
+        message.innerHTML = "Please select language"
     }
     document.getElementById("username").value = "";
     var h3 = document.getElementsByTagName("h3")[0];
