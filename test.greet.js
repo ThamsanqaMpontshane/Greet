@@ -17,6 +17,7 @@ describe("GREETINGS APP", function () {
             greeting.setName("Lucky");
             assert.equal(greeting.greetingMessage("Lucky", "Afrikaans"), "Hallo Lucky");
         });
+
     });
 
     describe("Counter", function () {
@@ -55,23 +56,4 @@ describe("GREETINGS APP", function () {
             assert.equal(greeting.forCounter(), 3);
         });
     });
-    describe("Error Messages", function () {
-        it("should return an error message if the user has not been greeted", function () {
-            let greeting = greet();
-            assert.equal(greeting.greetingMessage("", "English"), "Please enter a name");
-        });
-
-        it("should return an error message if the user has not been greeted", function () {
-            let greeting = greet();
-            assert.equal(greeting.greetingMessage("", "Xhosa"), "Please enter a name");
-        });
-
-        it("should return an error message if the user has not been greeted", function () {
-            let greeting = greet();
-            assert.equal(greeting.greetingMessage("", "Afrikaans"), "Please enter a name");
-        });
-    });
-
-
-
 });

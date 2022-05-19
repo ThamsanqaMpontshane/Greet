@@ -17,24 +17,24 @@ function greet() {
         setName(name);
         if (language == "English") {
             return "Hello " + name;
-        } else if (language == "Xhosa") {
-            return "Molo " + name;
-        } else if (language == "Afrikaans") {
-            return "Hallo " + name;
-        } else if (name == "") {
-            return "Please enter a name";
         }
-
+        else if (language == "Xhosa") {
+            return "Molo " + name;
+        }
+        else if (language == "Afrikaans") {
+           return "Hallo " + name;
+        }
     }
-}
 
-function forCounter() {
-    return Object.keys(nameMap).length;
-}
+    function forCounter() {
+        return Object.keys(nameMap).length;
+    }
 
-return {
-    setName,
-    getName,
-    greetingMessage,
-    forCounter
+    return {
+        setName,
+        getName,
+        greetingMessage,
+        forCounter
+    };
 };
+
