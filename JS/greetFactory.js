@@ -15,14 +15,21 @@ function greet() {
     function greetingMessage(name, language) {
 
         setName(name);
-        if (language == "English") {
+        if (language == "English" && name !== "") {
             return "Hello " + name;
-        }
-        else if (language == "Xhosa") {
+        } else if (language == "Xhosa" && name !== "") {
             return "Molo " + name;
+        } else if (language == "Afrikaans" && name !== "") {
+            return "Hallo " + name;
         }
-        else if (language == "Afrikaans") {
-           return "Hallo " + name;
+        else if (name == "" && language == "") {
+            return "Please enter a name and language";
+        }
+        else if (name == "" && language !== "") {
+            return "Please enter a name";
+        }
+        else if (name.match(/^[a-zA-Z]+$/) == false ) {
+            return "Please enter a valid name";
         }
     }
 
@@ -37,4 +44,3 @@ function greet() {
         forCounter
     };
 };
-

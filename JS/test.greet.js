@@ -56,4 +56,15 @@ describe("GREETINGS APP", function () {
             assert.equal(greeting.forCounter(), 3);
         });
     });
+    describe("Error", function () {
+        it("should return error message when name is empty and language is empty", function () {
+            let greeting = greet();
+            assert.equal(greeting.greetingMessage("", ""), "Please enter a name and language");
+        });
+
+        it("should return error message when name is empty", function () {
+            let greeting = greet();
+            assert.equal(greeting.greetingMessage("", "English"), "Please enter a name");
+        });
+    });
 });
