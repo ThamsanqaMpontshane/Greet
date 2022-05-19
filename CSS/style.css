@@ -1,41 +1,48 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.container{
+
+.container {
     width: 40%;
     height: 40%;
-    margin:5% 30%;
+    margin: 5% 30%;
     background-color: #DBCBD8;
 
     border-radius: 0px 50px;
     /* box-shadow: 0 0 10px rgba(0,0,0,0.5); */
     border: 3px solid black;
 }
-body{
+
+body {
     background-color: #BBDEF0;
 }
-.counter{
+
+.counter {
     color: red;
 }
-.username{
+
+.username {
     color: blue;
 
 }
-h1{
+
+h1 {
     text-align: center;
     color: black;
     margin-top: 10px;
 }
-#message{
+
+#message {
     text-align: center;
     color: black;
     font-size: 40px;
     font-weight: 700;
 }
+
 /* button on hover */
-button:hover{
+button:hover {
     background-color: #DBCBD8;
     color: black;
     border: 1px solid black;
