@@ -16,26 +16,25 @@ function greet() {
 
         setName(name);
         if (language == "English") {
-            return "Hello " + setName();
+            return "Hello " + name;
+        } else if (language == "Xhosa") {
+            return "Molo " + name;
+        } else if (language == "Afrikaans") {
+            return "Hallo " + name;
+        } else if (name == "") {
+            return "Please enter a name";
         }
-        else if (language == "Xhosa") {
-            return "Molo " + setName();
-        }
-        else if (language == "Afrikaans") {
-           return "Hallo " + setName();
-        }
-    }
 
-    function forCounter() {
-        Object.keys(nameMap).length;
     }
+}
 
-    return {
-        setName,
-        getName,
-        greetingMessage,
-        forCounter
-    };
+function forCounter() {
+    return Object.keys(nameMap).length;
+}
+
+return {
+    setName,
+    getName,
+    greetingMessage,
+    forCounter
 };
-//unit test for greet function using assert.equal
-

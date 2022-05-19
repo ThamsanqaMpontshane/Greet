@@ -2,8 +2,6 @@ var message = document.getElementById("message");
 var greetingsCounter = 0;
 var nameMap = {};
 
-
-
 function greeting(event) {
     event.preventDefault();    
 
@@ -78,3 +76,4 @@ function clearLocalStorage(event) {
     radioAfrikaans.checked = false;
     location.reload();
 }
+
