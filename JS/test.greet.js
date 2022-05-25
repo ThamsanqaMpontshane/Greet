@@ -60,12 +60,32 @@ describe("GREETINGS APP", function () {
     describe("Error", function () {
         it("should return error message when name is empty and language is empty", function () {
             let greeting = greet();
-            assert.equal(greeting.greetingMessage("", ""), "Please enter a name and language");
+            assert.equal(greeting.error("", null), "Please Enter A Name And Language");
         });
-
-        it("should return error message when name is empty", function () {
+        it("should return error message when name is empty and language is not empty", function () {
             let greeting = greet();
-            assert.equal(greeting.greetingMessage("", "English"), "Please enter a name");
+            assert.equal(greeting.error("", "English"), "Please Enter A Name");
+        });
+        it("should return error message when name is not empty and language is empty", function () {
+            let greeting = greet();
+            assert.equal(greeting.error("Lucky", null), "Please Select A Language");
+        });
+        it("should return error message when name does not match the regex", function () {
+            let greeting = greet();
+            assert.equal(greeting.error("123", "English"), "Please Enter A Valid Name");
+        });
+    });
+
+    describe("Duplicates", function () {
+        it("should return true if name is in the list", function () {
+            let greeting = greet();
+            greeting.greetingMessage("Lucky", "English");
+            assert.equal(greeting.duplicates("Lucky"), true);
+        });
+        it("should return false if name is not in the list", function () {
+            let greeting = greet();
+            greeting.greetingMessage("Khisto", "English");
+            assert.equal(greeting.duplicates("Lucky"), false);
         });
     });
 });

@@ -27,9 +27,9 @@ function greetingMessage(name, language) {
 }
 function error(name, language){
         if (name == "" && language == null) {
-            return "Please Enter A name And Language";
+            return "Please Enter A Name And Language";
         }
-        else if (name == "" && language !== null) {
+        else if (name == "" && language !== "") {
             return "Please Enter A Name";
         }
         else if (!name.match(/^[a-zA-Z]+$/)) {
