@@ -14,7 +14,7 @@
     <h1>GREETINGS</h1>
     <br>
     <br>
-    <form onsubmit="greeting(event)">
+    <!-- <form onsubmit=""> -->
 
       <div class="num1">
         <label for="username" style="margin-left: 35px; text-decoration: underline;">Name</label>
@@ -37,18 +37,20 @@
       <br>
       <!-- div that will store my usernames -->
       
-      <button type="submit" style="margin-left: 163px; width: 100px; height: 28px" onclick="countUsers()">Greet</button>
+      <button type="submit" style="margin-left: 163px; width: 100px; height: 28px" onclick="greetingMsg()">Greet</button>
       <!-- button to clear -->
       <button type="reset" style="margin-left: 10px; width: 100px; height: 28px" class="clear"onclick="clearLocalStorage(event)">Clear</button>
       <br>
       <br>
       <h3 class="counter" id="text" style="text-align: center;">0</h3>
-    </form>
+    <!-- </form> -->
   </div>
   <div id="message">
       </div>
+  <script src="./JS/greetFactory.js"></script>
+  
   <script src="./JS/greet.js"></script>
-  <!-- <script src="store.js"></script> -->
+  
 </body>
 
 </html>
