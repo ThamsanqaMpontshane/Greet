@@ -33,5 +33,12 @@ if (/^[a-zA-Z]+$/.test(upperCaseName)) {
 function clearLocalStorage(event) {
   event.preventDefault();
   localStorage.clear();
-  location.reload();
+  message.innerHTML = "Local Storage Cleared";
+  message.style.color = "red";
+  //after 2 seconds the message will disappear and the page will reload
+  setTimeout(function() {
+    message.innerHTML = "";
+    location.reload();
+  }
+  , 2000);
 }
