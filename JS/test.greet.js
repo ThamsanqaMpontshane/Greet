@@ -54,7 +54,7 @@ describe("GREETINGS APP", function () {
         });
     });
 
-    describe("Error", function () {
+    describe("Error Messages", function () {
         it("should return error message when name is empty and language is empty", function () {
             let greeting = greet();
             assert.equal(greeting.error("", null), "Please Enter A Name And Language");
