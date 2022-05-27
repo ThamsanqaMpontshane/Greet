@@ -2,19 +2,16 @@ describe("GREETINGS APP", function () {
     describe("Greeting", function () {
         it("should greet the user in English", function () {
             let greeting = greet();
-            greeting.setName("Lucky");
             assert.equal(greeting.greetingMessage("Lucky", "English"), "Hello Lucky");
         });
 
         it("should greet the user in Xhosa", function () {
             let greeting = greet();
-            greeting.setName("Lucky");
             assert.equal(greeting.greetingMessage("Lucky", "Xhosa"), "Molo Lucky");
         });
 
         it("should greet the user in Afrikaans", function () {
             let greeting = greet();
-            greeting.setName("Lucky");
             assert.equal(greeting.greetingMessage("Lucky", "Afrikaans"), "Hallo Lucky");
         });
 
